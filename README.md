@@ -45,7 +45,7 @@ So, here is the API call for a C5 major chord.
 
 Here is the api call that gets a I major chord on C5 in first inversion
 
-`/audio/midi/chords/roman/One/Major?transposition=72`
+`/chords/roman/One/Major?transposition=72`
 
 # Credits
 
