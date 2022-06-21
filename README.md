@@ -15,11 +15,6 @@ So, here is the API call for a C5 major chord.
 |`GET /audio/midi/chords/roman/{numeral}/{mode}`| gets a midi file that plays the chord with the specified RomanNumeral `numeral` and Mode `mode`. | `transposition`, `inversion`|
 |`GET /audio/wave/chords/roman/{numeral}/{mode}`| gets a wave file that plays the chord with the specified RomanNumeral `numeral` and Mode `mode`. | `transposition`, `inversion`|
 
-> the default transposition is middle C -> 60
-
-> the default inversion is 0.
-
-
 ## Supported Modes
 - Major
 - Minor
