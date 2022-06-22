@@ -1,10 +1,8 @@
 ﻿# ChordService
 
-A small and lightweight API to generate Chord data using Roman Numerals.
+A small and lightweight API to generate Chord data and sound examples using Roman Numerals.
 
 Chords are generated in midi note representation, which means each integer is a note in 12-tone-equal temperament and middle C equals a transposition of 60.
-
-So, here is the API call for a C5 major chord. 
 
 # API definition
 
