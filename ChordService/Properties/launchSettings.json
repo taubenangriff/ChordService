@@ -12,7 +12,7 @@
     "ChordService": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "chords/roman",
+      "launchUrl": "swagger/index.html",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

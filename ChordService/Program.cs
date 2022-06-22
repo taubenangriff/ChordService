@@ -12,7 +12,16 @@ builder.Services.AddSingleton<RomanNumeralService>();
 builder.Services.AddSingleton<AudioService>();
 builder.Services.AddResponseCaching();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection(); 
 app.UseResponseCaching();
@@ -20,10 +29,10 @@ app.UseResponseCaching();
 //some extremely lazy error handling
 app.UseExceptionHandler(c => c.Run(async context =>
 {
-    var exception = context.Features
-        .Get<IExceptionHandlerPathFeature>()
+    var exception = context.Features?
+        .Get<IExceptionHandlerPathFeature>()?
         .Error;
-    var response = new { error = exception.Message };
+    var response = new { error = exception?.Message };
     await context.Response.WriteAsJsonAsync(response);
 }));
 
@@ -83,4 +92,4 @@ app.MapGet("/audio/{type}/chords/roman/{numeral}/{mode}",
         Results.NotFound();
 });
 
-app.Run(@"https://localhost:3000");
+app.Run();
