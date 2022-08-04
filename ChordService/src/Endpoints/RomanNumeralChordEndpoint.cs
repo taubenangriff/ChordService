@@ -8,7 +8,7 @@ using FastEndpoints;
 
 namespace ChordService.src.Endpoints
 {
-    [HttpGet("chords/roman"), AllowAnonymous]
+    [HttpGet("chords/roman/{Numeral}/{Mode}"), AllowAnonymous]
     public class RomanNumeralChordEndpoint : Endpoint<RomanNumeralChordRequest, ChordResponse>
     {
         private readonly IRomanNumeralChordService _romanNumeralChordService;

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ChordService.src.Endpoints
 {
-    [HttpGet("audio/roman"), AllowAnonymous]
+    [HttpGet("audio/chords/roman/{Numeral}/{Mode}"), AllowAnonymous]
     public class RomanNumeralAudioEndpoint : Endpoint<RomanNumeralAudioRequest, FileResponse>
     {
         private readonly IRomanNumeralChordService _romanNumeralChordService;
