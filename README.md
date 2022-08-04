@@ -8,9 +8,8 @@ Chords are generated in midi note representation, which means each integer is a 
 
 | **Endpoint** | **Description** | **Optional Parameters** |
 |-|-|-|
-|`GET /randomchord`| gets a random chord | none |
 |`GET /chords/roman/{numeral}/{mode}`| gets a chord with the specified RomanNumeral `numeral` and Mode `mode`. | `transposition`, `inversion`|
-|`GET /audio/chords/roman/{numeral}/{mode}`| gets a wave file that plays the chord with the specified RomanNumeral `numeral` and Mode `mode`. | `transposition`, `inversion`, `AudioType`|
+|`GET /audio/chords/roman/{numeral}/{mode}`| gets a wave file that plays the chord with Numeral `numeral` Mode `mode`. | `transposition`, `inversion`, `AudioType`|
 
 ## Supported Modes
 - Major
