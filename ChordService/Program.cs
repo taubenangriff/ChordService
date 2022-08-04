@@ -27,6 +27,6 @@ app.UseOpenApi();
 app.UseHttpsRedirection(); 
 app.UseResponseCaching();
 
-app.MapGet("/", () => "use chord/roman to get some fancy chord data or audio/roman to hear them!");
+app.MapGet("/", () => "use chords/roman to get some fancy chord data or audio/chords/roman to hear them!");
 
 app.Run();
